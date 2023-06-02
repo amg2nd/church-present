@@ -1,0 +1,13 @@
+<template name="nav_notes">
+  <div id="notesNavContainer">
+    {{#if listing}}
+    <div class="new-note button closed fade"><i class="fas fa-plus"></i></div>
+    <div class="new-note wrap">
+      <div id="new-title" class="tinymce-title">New Note Title</div>
+      <div id="new-note" class="tinymce-note"></div>
+      <button class="save">Save</button>
+      <button class="cancel">Cancel</button>
+    </div>
+    {{/if}}
+  </div>
+</template>

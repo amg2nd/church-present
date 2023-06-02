@@ -1,0 +1,19 @@
+<template name="notes">
+  <div id="notesContainer" class="page-container fade">
+    {{#each notes}}
+    <div>
+      {{#if listing}}
+      <span class="delete"><i class="fas fa-times"></i></span>
+      <span class="edit"><i class="fas fa-edit"></i></span>
+      <div class="title {{_id}} closed">{{{title}}}</div>
+      <div class="note wrap">{{{note}}}</div>
+      {{else}}
+      <div id="edit-title" class="tinymce-title">{{{title}}}</div>
+      <div id="edit-note" class="tinymce-note">{{{note}}}</div>
+      <button class="save">Save</button>
+      <button class="cancel">Cancel</button>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</template>

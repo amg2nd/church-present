@@ -1,0 +1,35 @@
+<template name="nav_worship">
+  <div id="worshipNavContainer">
+    {{#if listing}}
+    <div class="new-song button closed fade"><i class="fas fa-plus"></i></div>
+    <div class="new-song wrap">
+      <div id="new-title" class="tinymce-title">New Song Title</div>
+      <div id="new-song" class="tinymce-song"></div>
+      <button class="save">Save</button>
+      <button class="cancel">Cancel</button>
+    </div>
+    <div class="playlist-menu button closed fade"><i class="fab fa-youtube"></i></div>
+    <div class="playlist-menu wrap">
+      <select id="playlist">
+        {{#each playlists}}
+          <option value="{{this.list}}" {{playlistSelected this}}>{{this.title}}</option>
+        {{/each}}
+      </select>
+      <span id="goPlaylist"><i class="fas fa-arrow-circle-right"></i></span>
+    </div>
+    <div class="station-menu button closed fade"><i class="fas fa-broadcast-tower"></i></div>
+    <div class="station-menu wrap">
+      <select id="station">
+        {{#each stations}}
+          <option value="{{this.url}}" {{stationSelected this}}>{{this.title}}</option>
+        {{/each}}
+      </select>
+      <span id="goStation"><i class="fas fa-arrow-circle-right"></i></span>
+    </div>
+    <div class="worship-playlist button closed fade"><i class="fas fa-list-ol"></i></div>
+    <div class="worship-playlist wrap">
+      {{{worshipPlaylist}}}
+    </div>
+    {{/if}}
+  </div>
+</template>

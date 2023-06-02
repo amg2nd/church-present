@@ -1,0 +1,14 @@
+<template name="nav_top">
+  <div id="topNavContainer">
+    <div class="side-menu-button closed">
+      <div class="wrapper">
+        <div class="menu-bar menu-bar-top"></div>
+        <div class="menu-bar menu-bar-middle"></div>
+        <div class="menu-bar menu-bar-bottom"></div>
+      </div>
+    </div>
+    {{#if listing}}
+    <div class="present-button fade">{{{presentButton}}}</div>
+    {{/if}}
+  </div>
+</template>

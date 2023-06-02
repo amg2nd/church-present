@@ -1,0 +1,44 @@
+#worshipNavContainer {
+  text-align: center;
+  #new-title {
+    text-align: left;
+    p {
+      height: 18px;
+    }
+  }
+  .playlist-menu.wrap, .station-menu.wrap, .worship-playlist.wrap {
+    select, svg {
+      font-size: 2em;
+      margin: 2px;
+      cursor: pointer;
+    }
+    select {
+      max-width: calc(100% - 44px);
+    }
+  }
+  .worship-playlist.wrap {
+    text-align: left;
+    ol {
+      margin: 0;
+      padding-left: 15px;
+      li {
+        white-space: normal;
+      }
+      li.current {
+        color: blue;
+      }
+    }
+  }
+  .new-song.button {
+    margin-left: -80px;
+  }
+  .playlist-menu.button {
+    margin-left: -42px;
+  }
+  .station-menu.button {
+    margin-left: 2px;
+  }
+  .worship-playlist.button {
+    margin-left: 52px;
+  }
+}

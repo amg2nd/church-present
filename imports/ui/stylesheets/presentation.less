@@ -1,0 +1,43 @@
+#presentationContainer {
+  position: relative;
+  #fullScreen {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  #bottomContainer {
+    position: fixed;
+    height: 3.4vw;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    #position {
+      text-align: center;
+      font-size: 2.5vw;
+      height: 3.4vw;
+      padding-top: 2px;
+      background: #fff;
+      box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  }
+  #display-container {
+    height: 100vh;
+    #display {
+      font-size: 4.3vw;
+      .passage-content {
+        padding: 0 10px 4vw;
+        text-align: left;
+        h3 {
+          font-size: 3.4vw;
+        }
+        .poetry {
+          padding-left: 4.3vw;
+        }
+      }
+    }
+  }
+    
+}

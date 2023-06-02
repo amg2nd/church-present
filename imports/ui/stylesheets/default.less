@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior:smooth;
+}
+body {
+  margin:0;
+  font-family:serif;
+}
+
+#display-container {
+  position:relative;
+  width:100%;
+  height:100%;
+  display:table;
+  overflow:hidden;
+  #display {
+    position:relative;
+    text-align:center;
+    display:table-cell;
+    vertical-align:middle;
+  }
+}
+.page-container {
+  position: relative;
+  padding: 10px;
+  font-size: 2em;
+  top: 35px;
+  height: calc(100vh - 35px);
+}
+
+.wrap  {
+  display: none;
+  white-space: nowrap;
+  background-color: #fff;
+  position: fixed;
+  z-index: 3;
+  top: 44px;
+  left: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 95%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: auto;
+  padding: 14px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.button {
+  position: fixed;
+  z-index: 5;
+  font-size: 2em;
+  top: 4px;
+  left: 50%;
+  width: 30px;
+  cursor: pointer;
+}
+.button.opened {
+  color: blue;
+}
+.delete {
+  position: relative;
+  z-index: 2;
+  float: right;
+  cursor: pointer;
+  svg {
+    font-size: 1em;
+  }
+}
+
+
+.modal-overlay {
+  position: fixed;
+	top: 0;
+	width: 100%;
+	height: 45px;
+	background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+#sideNavContainer .modal-overlay {
+	top: 45px;
+	height: 100%;
+  z-index: 3;
+}
+
+.invisible-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.invisible-scrollbar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}

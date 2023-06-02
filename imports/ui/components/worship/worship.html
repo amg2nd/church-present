@@ -1,0 +1,19 @@
+<template name="worship">
+  <div id="worshipContainer" class="page-container fade">
+    {{#each songs}}
+    <div>
+      {{#if listing}}
+      <span class="delete"><i class="fas fa-times"></i></span>
+      <span class="edit"><i class="fas fa-edit"></i></span>
+      <div class="title {{_id}} closed">{{{title}}}</div>
+      <div class="song wrap">{{{song}}}</div>
+      {{else}}
+      <div id="edit-title" class="tinymce-title">{{{title}}}</div>
+      <div id="edit-song" class="tinymce-song">{{{song}}}</div>
+      <button class="save">Save</button>
+      <button class="cancel">Cancel</button>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</template>

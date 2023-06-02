@@ -1,0 +1,48 @@
+<template name="nav_bible">
+  <div id="bibleNavContainer">
+    <div class="search-menu button closed fade"><i class="fas fa-search"></i></div>
+    <div class="search-menu wrap">
+      <div>
+        <select id="book">
+          {{#each books}}
+            <option value="{{this.shortCode}}" {{bookSelected this}}>{{this.title}}</option>
+          {{/each}}
+        </select>
+        <select id="chapter">
+          {{#each chapters}}
+            <option value="{{this}}" {{chapterSelected this}}>{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div style="margin-top:4px;">
+        <select id="verseStart">
+          {{#each verseStart}}
+            <option value="{{this}}" {{verseStartSelected this}}>{{this}}</option>
+          {{/each}}
+        </select>
+        <select id="verseEnd">
+          {{#each verseEnd}}
+            <option value="{{this}}" {{verseEndSelected this}}>{{this}}</option>
+          {{/each}}
+        </select>
+        <select id="version">
+          {{#each versions}}
+            <option value="{{this.shortCode}}" {{versionSelected this}}>{{this.shortCode}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div style="margin-top:4px;">
+        <span id="go">Search <i class="fas fa-arrow-circle-right"></i></span>
+      </div>
+    </div>
+    <div class="bookmark-menu button closed fade"><i class="far fa-bookmark"></i></div>
+    <div class="bookmark-menu wrap">
+      <ul>
+        {{#each bookmarks}}
+          <li><span class="delete"><i class="fas fa-times"></i></span><a href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        <li id="bookmark"></li>
+      </ul>
+    </div>
+  </div>
+</template>

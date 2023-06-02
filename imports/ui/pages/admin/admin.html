@@ -1,0 +1,30 @@
+<template name="page_admin">
+  <div id="adminContainer" class="page-container fade">
+    Admin Area
+    {{#if isInRole 'admin'}}
+      <div>Church Profiles:</div>
+      <select id="profile">
+        {{#each profiles}}
+          <option value="{{this.shortCode}}">{{this.title}}</option>
+        {{/each}}
+      </select>
+      {{#if edit}}
+      <button id="save">Save</button> <button id="cancel">Cancel</button>
+      {{else}}
+      <button id="edit">Edit</button>
+      {{/if}}
+      {{#if edit}}
+        <div>Edit Profile</div>
+        <div id="profileImage">
+        {{#if hasProfileImage}}
+          <div>Image:</div> 
+          {{> showProfileImage}}
+        {{else}}
+          <div>Upload image:</div> 
+          {{> uploadForm}}
+        {{/if}}
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</template>

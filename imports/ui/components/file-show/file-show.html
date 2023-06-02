@@ -1,0 +1,43 @@
+<template name="uploadedFiles">
+  {{#if uploadedFiles.count}}
+    <ul>
+      {{#each file in uploadedFiles.each}}
+        <li>
+          <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <div>No files uploaded, yet</div>
+  {{/if}}
+</template>
+
+<template name='showProfileImage'>
+  <img style="width: 200px;" src="{{file.link}}" alt="{{file.name}}" /> <span class="delete" style="position: absolute;cursor: pointer;margin-left: -29px;"><i class="fas fa-times"></i></span>
+</template>
+
+<template name='showFiles'>
+  {{#if imageFiles.count}}
+    <ul>
+      {{#each file in imageFiles.each}}
+        <li>
+          <img style="width: 200px;" src="{{file.link}}" alt="{{file.name}}" /> <span class="delete" style="position: absolute;cursor: pointer;margin-left: -29px;"><i class="fas fa-times"></i></span>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <div>No files uploaded, yet</div>
+  {{/if}}
+  
+  <!-- Same as: -->
+  <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
+  
+  
+  <!--
+  <hr>
+  <video height="auto" controls="controls">
+    <source src="{{videoFile.link}}?play=true" type="{{videoFile.type}}" />
+  </video>
+  -->
+  
+</template>

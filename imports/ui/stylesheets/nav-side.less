@@ -1,0 +1,63 @@
+#sideNavContainer {
+  position: fixed;
+  z-index: 4;
+  .side-menu-wrap {
+    position: fixed;
+    z-index: inherit;
+    box-sizing: border-box;
+    background-color: #fff;
+    top: 0;
+    width: auto;
+    height: 100%;
+    margin-top: 34px;
+    margin-left: -999em;
+    padding: 10px;
+    font-size: 2em;
+    transition: .25s;
+    .menu-sidebar > div {
+      cursor: pointer;
+      padding: 5px;
+      div {
+        cursor: default;
+      }
+    }
+    div > svg {
+      width: 40px;
+      padding-right: 10px;
+      text-align: center;
+    }
+    #stream {
+      bottom: 40px;
+      position: absolute;
+    }
+  }
+  .menu-show {
+    margin-left: 0!important;
+    box-shadow: 6px 0 6px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+  }
+}
+#login-buttons {
+  #login-dropdown-list {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .login-close-text {
+      float: right;
+    }
+    div {
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .login-form-sign-in .login-close-text{
+    padding: 0;
+  }
+}
+  

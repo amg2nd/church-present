@@ -1,0 +1,19 @@
+{
+  "name": "church-present",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "aws-sdk": "^2.1388.0",
+    "bcrypt": "^5.0.1",
+    "jquery": "^3.5.1",
+    "meteor-node-stubs": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}

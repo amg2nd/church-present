@@ -1,0 +1,37 @@
+#bibleNavContainer {
+  text-align: center;
+  .search-menu.wrap, .bookmark-menu.wrap  {
+    select, #go {
+      font-size: 2em;
+      margin: 2px;
+      cursor: pointer;
+    }
+    select {
+      max-width: calc(100% - 70px);
+    }
+  }
+  .bookmark-menu.wrap {
+    text-align: left;
+    ul {
+      margin: 0;
+      padding-left: 0;
+      li {
+        display: block;
+        font-size: 2em;
+        .delete {
+          margin: 0 0 0 14px;
+        }
+      }
+      #bookmark {
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+  .search-menu.button {
+    margin-left: -36px;
+  }
+  .bookmark-menu.button {
+    margin-left: 4px;
+  }
+}

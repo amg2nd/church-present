@@ -1,0 +1,11 @@
+<template name="presentation">
+  <div id="presentationContainer">
+    <div id="fullScreen"><i class="fas fa-expand-arrows-alt"></i></div>
+    <div id="display-container">
+      <div id="display">{{{code}}}</div>
+    </div>
+    {{#if position}}
+      <div id="bottomContainer">{{{position}}}</div>
+    {{/if}}
+  </div>
+</template>
